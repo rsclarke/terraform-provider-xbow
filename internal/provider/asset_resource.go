@@ -724,7 +724,7 @@ func (r *AssetResource) buildUpdateRequest(ctx context.Context, data *AssetResou
 	return updateReq
 }
 
-func (r *AssetResource) populateModelFromAsset(ctx context.Context, data *AssetResourceModel, asset *xbow.Asset, diags *diag.Diagnostics) {
+func (r *AssetResource) populateModelFromAsset(_ context.Context, data *AssetResourceModel, asset *xbow.Asset, diags *diag.Diagnostics) {
 	data.ID = types.StringValue(asset.ID)
 	data.Name = types.StringValue(asset.Name)
 	data.OrganizationID = types.StringValue(asset.OrganizationID)
